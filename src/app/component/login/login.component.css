@@ -5,8 +5,7 @@
     align-items: center;
     min-height: 100vh;
     background: #ffffff;
-    /* Puedes descomentar la siguiente línea si tienes una imagen de fondo */
-    /* background-image: url(./bg.jpg); */
+
 }
 
 /* Estilos para el contenedor hijo */
@@ -77,6 +76,7 @@ h2 {
     padding: 0 20px;
     transition: .5s ease;
 }
+/* Segundo color caja de entrada */
 
 .input-box input:focus,
 .input-box input:valid {
@@ -94,7 +94,7 @@ h2 {
     pointer-events: none;
     transition: .5s ease;
 }
-
+/* Segundo color de letras de la caja */
 .input-box input:focus~label,
 .input-box input:valid~label {
     top: 1px;
