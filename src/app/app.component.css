@@ -1,0 +1,51 @@
+/* main.css */
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #ff0000; /* Color de fondo */
+    color: rgb(255, 255, 255); /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar-brand {
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Color del texto */
+}
+
+/* Estilos para el contenido principal */
+.general-styles {
+    /* Estilos generales para el contenido... */
+}
+
+/* Estilos para los elementos de la lista */
+.navbar-nav li {
+    margin-right: 15px; /* Espaciado entre elementos */
+}
+
+/* Estilos para el contenido principal */
+.general-styles {
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde alrededor del contenido */
+    background-color: #f9f9f9; /* Color de fondo */
+}
+
+
+html, body {
+    height: 100%;
+  }
+  
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  li {
+    background-color: #005eff;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+  
+  a {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
