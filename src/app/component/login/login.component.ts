@@ -20,15 +20,32 @@ export class LoginComponent {
   }
 
   onLogin() {
-    // Validar el correo electrónico y la contraseña
-    if (this.loginObj.Email !== "Correo" || this.loginObj.Password !== "1234") {
-      alert("Credenciales incorrectas. Verifica el correo y la contraseña.");
-      return;
+    // Validar el formato del correo electrónico
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (this.loginObj.Email !== "Correo@gmail.com" || !emailRegex.test(this.loginObj.Email)) {
+        alert("Por favor, ingresa un correo electrónico válido.");
+        return;
     }
+
+    // Validar la contraseña
+    if (this.loginObj.Password !== "1234") {
+        alert("Credenciales incorrectas. Verifica la contraseña.");
+        return;
+    }
+
+    // Mostrar una alerta con la información escrita
+    const mensajeAlerta = "¡Bienvenido! Has iniciado sesión correctamente."+
+    "Tu Correo es "+this.loginObj.Email+" Tu Contraseña es "+this.loginObj.Password;
+    alert(mensajeAlerta);
 
     // Redirigir al usuario a la ruta "/home"
     this.router.navigateByUrl('/home');
-  }
+}
+
+onRegister() {
+  this.router.navigateByUrl('/register');
+}
+
 }
 
 export class Login {
