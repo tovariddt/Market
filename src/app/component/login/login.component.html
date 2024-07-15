@@ -12,12 +12,11 @@
                     <input type="password" [(ngModel)]="loginObj.Password" name="Password" required>
                     <label>Contraseña</label>
                 </div>
-                <div>
-                    <button type="button" class="btn" (click)="onLogin()" >Iniciar sesión</button>
-                </div>
-
-                <div>
-                    <button type="button" class="btn" (click)="onRegister()" >Registrarse</button>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-9 text-right" >
+                    <button type="button" class="button" (click)="onLogin()" >Iniciar sesión</button>
+            
+                    <button type="button" class="button" (click)="onRegister()" >Registrarse</button>
                 </div>
                  
             </form>
