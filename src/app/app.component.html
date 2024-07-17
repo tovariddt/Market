@@ -1,30 +1,87 @@
-<div class="general-styles">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home Market</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="navbar-brand" href="/home">Home </a>
+<div class="d-flex" >
+    <!-- Contenedor principal -->
+  <div id="sidebar">
+    <div class="p-2" style="background-color:#ff0000;">
+      <a href="home" class="navbar-brand text-center text-light w-100 p-4 border-bottom" >
+        Market
+      </a>
+    </div>
 
-            <li class="nav-item">
-              <a class="navbar-brand" href="/login">Iniciar sesión</a>
-
-          </li>
-          <li class="nav-item">
-    
-          </li>
-          <li class="nav-item">
-
-          </li>
-  
-        </ul>
+    <div id="sidebar-accordion" class="accordion" >
+      <div class="list-group">
+        <a href="#dashboard-items" data-toggle="collapse" aria-expanded="false"
+          class="list-group-item list-group-item-action bg-dark text-light">
+          <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Dashboard
+        </a>
+        <div id="dashboard-items" class="collapse" data-parent="#sidebar-accordion">
+          <a href="#" class="list-group-item list-group-item-action bg-dark text-light pl-5">
+            Item 1
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-dark text-light pl-5">
+            Item 2
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-dark text-light pl-5">
+            Item 3
+          </a>
+        </div>
+        <a href="#profile-items" data-toggle="collapse" aria-expanded="false"
+          class="list-group-item list-group-item-action bg-dark text-light">
+          <i class="fa fa-user mr-3" aria-hidden="true"></i>Profile
+        </a>
+        <div id="profile-items" class="collapse" data-parent="#sidebar-accordion">
+          <a href="#" class="list-group-item list-group-item-action bg-dark text-light pl-5">
+            Item 1
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-dark text-light pl-5">
+            Item 2
+          </a>
+        </div>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-light">
+          <i class="fa fa-shopping-cart mr-3" aria-hidden="true"></i>Buy Now!
+        </a>
+        <a href="#setting-items" data-toggle="collapse" aria-expanded="false"
+          class="list-group-item list-group-item-action bg-dark text-light">
+          <i class="fa fa-cog mr-3" aria-hidden="true"></i>Settings
+        </a>
+        <div id="setting-items" class="collapse" data-parent="#sidebar-accordion">
+          <div class="d-flex flex-row text-center">
+            <a href="#" class="list-group-item list-group-item-action bg-dark text-light">
+              Item 1
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-dark text-light">
+              Item 2
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
+  </div>
+  <div class="content w-100" style="background-color:rgba(134, 70, 70, 0.679);">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+      <div class="container-xl">
+        <a class="navbar-brand">Menu</a>
+        <div class="collapse navbar-collapse" id="navbarsExample07XL">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/login">Iniciar Sesion <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register">Registrarse <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
   <router-outlet></router-outlet>
+  </div>
 </div>
+
+<footer class="bg-body-tertiary text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color:rgba(255, 0, 0, 0.5);">
+    Derecho Reservado
+    <a class="text-body" href="/home">Home</a>
+  </div>
+  <!-- Copyright -->
+</footer>

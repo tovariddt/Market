@@ -1,22 +1,20 @@
-
-<div class="parent">
-    <div class="container">
-        <div class="login-box">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <input type="email" [(ngModel)]="loginObj.Email" name="EmailId" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <input type="password" [(ngModel)]="loginObj.Password" name="Password" required>
-                    <label>Password</label>
-                </div>
-                
-                <button type="button" class="btn" (click)="onLogin()" >Login</button>
-                 
-            </form>
-        </div>
-        
-    </div>
-</div>
+<section class="container">
+<form class="form">
+    <p class="title">Inicicar Sesion </p>
+        <div class="flex">
+    </div>  
+            
+    <label>
+        <input  required="" placeholder="" type="email" [(ngModel)]="loginObj.Email" name="EmailId" class="input">
+        <span>Email</span>
+    </label>
+    
+    <label>
+        <input required="" placeholder="" type="password" [(ngModel)]="loginObj.Password" name="Password" class="input">
+        <span>Password</span>
+    </label>
+    
+    <button class="boton" (click)="onLogin()" >Iniciar Sesion</button>
+    <p class="signin">¿Tienes una cuenta ?<a href="/register">Registrate</a> </p>
+</form>
+</section>
