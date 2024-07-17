@@ -1,58 +1,43 @@
-// register.component.ts
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
   standalone: true,
   imports: [FormsModule, HttpClientModule],
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-registroObj: Registro;
-correo: any;
-nombre: any;
-apellido_paterno: any;
-apellido_materno: any;
-direccion: any;
-referencia: any;
-telefono: any;
-contrasena: any;
 
+  registerObj: Register;
   constructor(private router: Router) {
-    this.registroObj = new Registro();
+    this.registerObj = new Register();
   }
 
-  onRegister() {
-    // Validar los campos y realizar el registro
-    // (Aquí debes implementar la lógica de registro según tus necesidades)
+onRegister() {
+    // Validar el formato del correo electrónico
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (this.registerObj.Email == 'Correo@gmail.com' || emailRegex.test(this.registerObj.Email)) {
+        document.getElementById('Allform')!.classList.remove('d-none');
+        document.getElementById('AlertEmail')!.classList.add('d-none');
+        return;
+    } else {
+      document.getElementById('AlertEmail')!.classList.remove('d-none');
+      document.getElementById('Allform')!.classList.add('d-none');
 
-    // Redirigir al usuario a la ruta "/home" u otra ruta apropiada
-    this.router.navigateByUrl('/home');
-  }
+    }
 }
 
-export class Registro {
-  nombre: string;
-  apellido_paterno: string;
-  apellido_materno: string;
-  direccion: string;
-  referencia: string;
-  telefono: string;
-  correo: string;
-  contrasena: string;
 
+}
+export class Register {
+  Email: string;
   constructor() {
-    this.nombre = '';
-    this.apellido_paterno = '';
-    this.apellido_materno = '';
-    this.direccion = '';
-    this.referencia = '';
-    this.telefono = '';
-    this.correo = '';
-    this.contrasena = '';
+    this.Email = '';
   }
 }

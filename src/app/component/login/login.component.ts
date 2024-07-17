@@ -36,7 +36,7 @@ export class LoginComponent {
         return;
     }
 
-    // Mostrar una alerta con la información escrita
+    // Mostrar una alerta con la información escri
     const mensajeAlerta = "¡Bienvenido! Has iniciado sesión correctamente."+
     "Tu Correo es "+this.loginObj.Email+" Tu Contraseña es "+this.loginObj.Password;
     alert(mensajeAlerta);
