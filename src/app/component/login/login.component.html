@@ -5,16 +5,30 @@
     </div>  
             
     <label>
-        <input  required="" placeholder="" type="email" [(ngModel)]="loginObj.Email" name="EmailId" class="input">
+        <input required="" placeholder="" type="email" [(ngModel)]="loginObj.Email" name="EmailId" class="input">
         <span>Email</span>
+        <div style="text-align: center;">
+            <div class="alert alert-warning d-none" role="alert" id="AlertEmail">
+                Error
+               <button type="button" data-bs-dismiss="alert" class="btn btn-link" aria-label="Close">&times;</button>
+            </div>
+        </div>
     </label>
+    
     
     <label>
         <input required="" placeholder="" type="password" [(ngModel)]="loginObj.Password" name="Password" class="input">
         <span>Password</span>
+        <div style="text-align: center;">
+            <div class="alert alert-warning d-none" role="alert" id="AlertPaswork">
+                Error
+                <button type="button" data-bs-dismiss="alert" class="btn btn-link" aria-label="Close">&times;</button>
+            </div>
+        </div>
     </label>
     
     <button class="boton" (click)="onLogin()" >Iniciar Sesion</button>
     <p class="signin">¿Tienes una cuenta ?<a href="/register">Registrate</a> </p>
 </form>
+
 </section>
